@@ -38,26 +38,26 @@ public class MCMAQuestion extends MCQuestion{
 	public void getAnswerFromStudent() {
 		//ScannerFactory sca = new ScannerFactory();
 		Scanner scan = ScannerFactory.getKeyboardScanner();
-	    char in = scan.findInLine(".").charAt(0);
-	    char toUpper = Character.toUpperCase(in);
-	    int t = toUpper - 65;
-	    int i = 0;
+    char in = scan.findInLine(".").charAt(0);
+    char toUpper = Character.toUpperCase(in);
+    int t = toUpper - 65;
+    int i = 0;
 
-	    while(t != -17 || i > answers.size()) {
-	    	System.out.println("You can enter more answers or enter 0 to end");
-	    	studentAnswer.add(answers.get(t));
-	    	scan.nextLine();
-	    	in = scan.findInLine(".").charAt(0);
-	    	//scan.next();
-	    	if(in == '0') {
-	    		break;
-	    	}
-	    	toUpper = Character.toUpperCase(in);
-	    	t = toUpper - 65;
-	    	i++;
-	    }
+    while(t != -17 || i > answers.size()) {
+    	System.out.println("You can enter more answers or enter 0 to end");
+    	studentAnswer.add(answers.get(t));
+    	scan.nextLine();
+    	in = scan.findInLine(".").charAt(0);
+    	//scan.next();
+    	if(in == '0') {
+    		break;
+    	}
+    	toUpper = Character.toUpperCase(in);
+    	t = toUpper - 65;
+    	i++;
+    }
 
-	    return;
+    return;
 	}
 
 
@@ -111,6 +111,23 @@ public class MCMAQuestion extends MCQuestion{
 
 	}
 
+@Override
+	public boolean isStudentAnswerEmpty(){
+		if(studentAnswer.size() == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 
+@Override
+	public void voidStudentAnswer(){
+		int i = studentAnswer.size()-1;
+		while(studentAnswer.size() != 0){
+			studentAnswer.remove(i);
+			i--;
+		}
+	}
 
 }

@@ -20,7 +20,7 @@ public abstract class MCAnswer extends Answer{
   public void print(){
 		System.out.println(text);
   }
-  
+
 
   public double getCredit(Answer rightAnswer) {
 
@@ -29,6 +29,10 @@ public abstract class MCAnswer extends Answer{
 
   public void save(PrintWriter writer) {
 	  writer.write(creditIfSelected + " " + text + "\r\n");
+  }
+
+  public String getText(){
+    return text;
   }
 
 }

@@ -8,12 +8,12 @@ abstract class MCQuestion extends Question{
   protected MCQuestion(String text, double maxValue){
     super(text, maxValue);
   }
-  
-  
+
+
   protected MCQuestion(Scanner scan) {
 	  super(scan);
   }
-  
+
 
   public void print() {//prints itself(question) and prints all the Answers
 		System.out.println(super.text);
@@ -23,9 +23,9 @@ abstract class MCQuestion extends Question{
 			answers.get(i).print();
 		}
   }
-  
 
-  
+
+
   public void addAnswer(MCAnswer answer) {//calls the Answer class and adds the object of Answer to the answers array
 	  answers.add(answer);
   }
@@ -34,18 +34,30 @@ abstract class MCQuestion extends Question{
   public void reorderAnswers() {// this method shuffles all the answers
 		Collections.shuffle(answers);
 	}
-  
-  
+
+
   public double getValue(MCAnswer answ) {
 	  double score = studentAnswer.getCredit(rightAnswer) * super.maxValue;
 	  return score;
   }
-  
-  
+
+
   public void save(PrintWriter writer) {
 	  writer.write("" + super.maxValue + "\r\n");
 	  writer.write(super.text + "\r\n");
-	  
+
   }
-  
+
+  public ArrayList<String> getAnswersText(){
+		ArrayList<String> answersText = new ArrayList<String>();
+    int size = answers.size();
+    int i = 0;
+
+    while(i != size){
+      answersText.add(answers.get(i).getText());
+      i++;
+    }
+    return answersText;
+	}
+
 }

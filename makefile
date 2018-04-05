@@ -2,6 +2,12 @@
 stage3: ExamTester.class
 	java ExamTester
 
+stage4: ExamTaker.class
+	java ExamTaker
+
+ExamTaker.class: ExamTaker.java
+	javac -g ExamTaker.java
+
 ExamTester.class: ExamTester.java
 	javac -g ExamTester.java
 
@@ -35,6 +41,18 @@ MCSAAnswer.class: MCSAAnswer.java
 MCMAAnswer.class: MCMAAnswer.java
 	javac -g MCMAAnswer.java
 
+NumQuestion.class: NumQuestion.java
+	javac -g NumQuestion.java
+
+NumAnswer.class: NumAnswer.java
+	javac -g NumAnswer.java
+
+SAQuestion.class: SAQuestion.java
+	javac -g SAQuestion.java
+
+SAAnswer.class: SAAnswer.java
+	javac -g SAAnswer.java 
 
 clean:
 		$(RM) *.class
+		rm Answer.txt
