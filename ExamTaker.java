@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0e94d7cd6b0c7f20386dc86b9ee266a9a2449646
 import java.util.*;
 import java.io.*;
 
@@ -90,5 +94,14 @@ public class ExamTaker{
 
     newExam.saveStudentAnswers(writer);
     writer.close();
+<<<<<<< HEAD
+=======
+=======
+public class ExamTester{
+
+  public static void main(String[] args) throws FileNotFoundException{
+    
+>>>>>>> 15ff83d0f72531469dae3b5fe67f2d0fa3859373
+>>>>>>> 0e94d7cd6b0c7f20386dc86b9ee266a9a2449646
   }
 }
