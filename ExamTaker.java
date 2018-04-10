@@ -15,9 +15,6 @@ public class ExamTaker{
   public void getStudentInfo(){
     System.out.print("Enter your Name: ");
     studentName = ScannerFactory.getKeyboardScanner().nextLine();
-    System.out.print("Enter your ID#: ");
-    studentID = ScannerFactory.getKeyboardScanner().nextInt();
-    System.out.println("ID: "+ studentID);
   }
 
   public static void main(String[] args) throws FileNotFoundException{
@@ -44,7 +41,7 @@ public class ExamTaker{
   //  String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
   //  System.out.println(timeStamp);
     PrintWriter writer = new PrintWriter(new File("Answer.txt"));
-    writer.write(examTaker.studentName + "\r\n" + examTaker.studentID + "\r\n" + fileName + "\r\n\r\n");
+    writer.write(examTaker.studentName + "\r\n" + fileName + "\r\n\r\n");
     writer.flush();
 
     Scanner scanQNum = new Scanner(System.in);
