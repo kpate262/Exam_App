@@ -274,6 +274,14 @@ public class Exam {
 		}
 	}
 
+	//support for ExamGrader
+	public boolean isMatching(String otherTitle){
+		if( title.equals(otherTitle) )
+			return true;
+		return false;
+	}
+
+
 	public int getNumOfQuestion(){
 		return questions.size();
 	}
