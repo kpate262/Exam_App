@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 import java.io.*;
 
@@ -90,5 +91,11 @@ public class ExamTaker{
 
     newExam.saveStudentAnswers(writer);
     writer.close();
+=======
+public class ExamTester{
+
+  public static void main(String[] args) throws FileNotFoundException{
+    
+>>>>>>> 15ff83d0f72531469dae3b5fe67f2d0fa3859373
   }
 }
